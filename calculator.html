@@ -29,7 +29,6 @@
             </tr>
             <tr>
                 <td class="digitButton" colspan="2" onclick="digitBtnPressed(0)">0</td>
-
                 <td class="ACButton" onclick="btnACPressed()">AC</td>
                 <td class="operatorButton" onclick="operatorBtnPressed('/')">/</td>
             </tr>
@@ -45,15 +44,14 @@
 
             //Event handler for when any digit button is pressed
             function digitBtnPressed(button){
-
                 if(newLine){
                     document.getElementById("inputBox").value = button;
                     newLine = false;
                 } else {
                 var currentValue = document.getElementById("inputBox").value;
                 document.getElementById("inputBox").value = currentValue + button;
+                }
             }
-        }
 
             //Event handler for when the AC button is pressed
             function btnACPressed(){
@@ -70,7 +68,7 @@
 
             //Event handler for equals to button
             function equalsBtnPressed(){
-                var values =parseInt(document.getElementById("inputBox").value);
+                var value2 =parseInt(document.getElementById("inputBox").value);
                 var finalTotal;
 
                 switch(currentOperator){
